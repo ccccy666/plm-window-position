@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this code or benchmark, please cite the paper."
+title: "When Does Window Position Matter in Protein Language Models? Code and benchmark"
+authors:
+  - family-names: Chen
+    given-names: Yifan
+    affiliation: Shanghai Jiao Tong University
+license: MIT
+repository-code: "https://github.com/ccccy666/plm-window-position"
+preferred-citation:
+  type: article
+  title: "When Does Window Position Matter in Protein Language Models? A Controlled Benchmark and Cross-Architecture Taxonomy"
+  authors:
+    - family-names: Chen
+      given-names: Yifan
+      affiliation: Shanghai Jiao Tong University
+  journal: "Transactions on Machine Learning Research"
+  issn: "2835-8856"
+  year: 2026
+  url: "https://openreview.net/forum?id=kEpikXuZfK"

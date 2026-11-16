@@ -1,0 +1,39 @@
+# ============================================================================
+# calibrate — LOCAL PILOT environment (Phase 0 only)
+# Target: single RTX 5080 16GB, Blackwell sm_120, WSL2.
+# Inference-only. NO deepspeed / flash-attn (Phase-2 cluster concerns).
+#
+# torch is installed SEPARATELY from the cu128 index (Blackwell needs CUDA 12.8):
+#   conda run -n calibrate pip install torch --index-url https://download.pytorch.org/whl/cu128
+# then:  conda run -n calibrate pip install -r requirements-pilot.txt
+# ============================================================================
+
+# torch installed via cu128 index (do not list here to avoid pulling a CPU build)
+numpy>=1.26
+scipy>=1.11
+
+# protein LMs needed for P1-P4 (ESM-2 650M + ProGen2-764M)
+fair-esm>=2.0.0
+transformers>=4.40
+tokenizers>=0.19
+huggingface-hub>=0.23
+accelerate>=0.30
+datasets>=2.19
+
+# bio data / IO
+biopython>=1.83
+pandas>=2.2
+pyarrow>=16.0
+h5py>=3.11
+
+# analysis & plotting
+scikit-learn>=1.4
+matplotlib>=3.8
+seaborn>=0.13
+statsmodels>=0.14
+tqdm>=4.66
+pyyaml>=6.0
+
+# dev
+pytest>=8.0
+ruff>=0.4

@@ -1,0 +1,17 @@
+Data license
+
+The benchmark snapshot (release/data/, data/processed/), the stored experiment outputs (experiments/,
+rebuttal/*.json), and the figures and tables (results/) in this repository are licensed under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+Copyright (c) 2026 Yifan Chen
+
+When you use them, please cite the paper (see README.md, "Citation").
+
+Third-party material keeps its own terms and attribution requirements:
+- UniProtKB sequences and annotations (UniProt Consortium), CC BY 4.0: https://www.uniprot.org/help/license
+- AlphaFold DB models (DeepMind / EMBL-EBI), CC BY 4.0, from which the contact labels in
+  experiments/phase3/b2_contacts_afdb/ are derived: https://alphafold.ebi.ac.uk/faq
+- ProteinGym deep mutational scanning assays (Notin et al., 2023) and the original assay publications, from
+  which the variant scores in experiments/phase0_pilot/p2*/ are derived: https://proteingym.org

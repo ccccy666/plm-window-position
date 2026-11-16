@@ -1,0 +1,68 @@
+{
+  "prereg": {
+    "precision_bar": 0.8,
+    "p_bar": 0.01,
+    "cutoff_A": 8.0,
+    "min_plddt": 70.0
+  },
+  "label_counts": {
+    "contact": 874,
+    "non-contact": 281,
+    "unverifiable": 23
+  },
+  "precision": 0.7567099567099567,
+  "n_proteins_with_structure": 99,
+  "partner_out": {
+    "all": {
+      "n": 1178,
+      "full": 0.8387946499628608,
+      "center": 0.7824646216296988,
+      "partner_edge": 0.5796832636580604,
+      "gap_pp": 20.27813579716383,
+      "ci": [
+        18.341768474803512,
+        22.230454569963932
+      ],
+      "p": 0.0,
+      "frac_degrading": 0.5814940577249575
+    },
+    "verified": {
+      "n": 874,
+      "full": 0.8554698673483981,
+      "center": 0.8079822549012488,
+      "partner_edge": 0.6028551743014181,
+      "gap_pp": 20.51270805998307,
+      "ci": [
+        18.260765494075468,
+        22.783346554302785
+      ],
+      "p": 0.0,
+      "frac_degrading": 0.5709382151029748
+    }
+  },
+  "tiling": {
+    "all": {
+      "W128 non-overlap": 0.4100169779286927,
+      "W128 50% overlap": 0.11714770797962648,
+      "W128 75% overlap": 0.07045840407470289,
+      "W256 non-overlap": 0.19100169779286927,
+      "W256 50% overlap": 0.008488964346349746,
+      "W256 75% overlap": 0.0,
+      "W384 non-overlap": 0.10441426146010187,
+      "W384 50% overlap": 0.0,
+      "W384 75% overlap": 0.0
+    },
+    "verified": {
+      "W128 non-overlap": 0.41189931350114417,
+      "W128 50% overlap": 0.13043478260869565,
+      "W128 75% overlap": 0.07780320366132723,
+      "W256 non-overlap": 0.18306636155606407,
+      "W256 50% overlap": 0.008009153318077803,
+      "W256 75% overlap": 0.0,
+      "W384 non-overlap": 0.10983981693363844,
+      "W384 50% overlap": 0.0,
+      "W384 75% overlap": 0.0
+    }
+  },
+  "decision": "keep the self-consistency wording"
+}

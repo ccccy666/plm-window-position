@@ -1,0 +1,6 @@
+task,group,n,center_minus_edge,unit,ci_low,ci_high,threshold,p,verdict,detail
+Masked recovery (controlled probe),positive,62,10.6971,pp,6.4534,15.3117,3.0,0.0,clears bar (p<0.01),"window-relocation, ESM-2, W=256"
+Embedding fidelity (controlled probe),positive,60,3.5751,pp,2.7735,4.4746,3.0,0.0,clears bar (p<0.01),"benchmark test split, ESM-2, W=256"
+ProteinGym VEP (Δρ),downstream,27,0.0193,Δρ,-0.0068,0.0458,0.03,0.1498,n.s. (CI crosses 0),"27 long assays, ESM-2 wt-marginals, W=256"
+Secondary structure (Q3),downstream,600,-0.5833,pp,-2.5,1.3333,3.0,0.5848,n.s. (CI crosses 0),"linear probe on ESM-2, W=256"
+Long-range contacts (prob),downstream,444,-0.3425,pp,-1.3733,0.7129,3.0,0.5088,n.s. (CI crosses 0),"ESM-2 contact head, sep 24-100, W=256"

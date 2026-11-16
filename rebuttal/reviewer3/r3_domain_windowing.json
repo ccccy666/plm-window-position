@@ -1,0 +1,16 @@
+{
+  "primary": {
+    "n": 55,
+    "edge": 0.9382458865642548,
+    "center": 0.9770127231424505,
+    "domain_aware": 0.9773226835510948,
+    "center_minus_edge_pp": 3.8766836578195747,
+    "center_edge_p": 0.0,
+    "domain_aware_minus_edge_pp": 3.907679698683999,
+    "dae_p": 0.0,
+    "domain_aware_minus_center_pp": 0.03099604086442427,
+    "dac_p": 0.0,
+    "recovered_fraction_pct": 100.79954783007273
+  },
+  "secondary": null
+}

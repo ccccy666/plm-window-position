@@ -1,0 +1,53 @@
+# ============================================================================
+# calibrate — Python dependencies
+# Versions are STARTING POINTS to confirm on the actual 8x24GB cluster
+# (flash-attn / deepspeed need a matching CUDA toolchain). After install, run
+# `pip freeze > requirements.lock` and record key versions in CLAUDE.md.
+# ============================================================================
+
+# --- Core DL ---
+torch>=2.2                      # match cluster CUDA; install the CUDA build, not CPU
+numpy>=1.26
+scipy>=1.11
+
+# --- Protein language models ---
+fair-esm>=2.0.0                 # ESM-1b/1v/2 + ESMFold (facebookresearch/esm)
+esm>=3.0.0                      # EvolutionaryScale ESM-3 / ESMC SDK
+transformers>=4.40              # ProGen2 / ESMC HF checkpoints, tokenizers
+tokenizers>=0.19
+huggingface-hub>=0.23
+datasets>=2.19                  # ProtNIAH packaging + benchmark loading
+
+# --- Parameter-efficient finetuning & scaling (Phase 2) ---
+peft>=0.11                      # LoRA adapters
+accelerate>=0.30
+deepspeed>=0.14                 # ZeRO-2 + activation checkpointing (verify build)
+# flash-attn>=2.5               # additive-bias attention; build is fragile -> install
+#                               # explicitly on the cluster, keep commented until verified
+
+# --- Bio data / IO ---
+biopython>=1.83                 # FASTA/GFF parsing, Swiss-Prot features
+pandas>=2.2
+pyarrow>=16.0                   # parquet experiment outputs
+h5py>=3.11                      # cached embeddings / distograms
+fair-esm[esmfold]               # optional: ESMFold extras (openfold deps) if folding locally
+
+# --- Analysis & plotting ---
+scikit-learn>=1.4               # linear probes, metrics
+matplotlib>=3.8
+seaborn>=0.13
+statsmodels>=0.14               # multiple-testing correction helpers
+tqdm>=4.66
+pyyaml>=6.0                     # run config.yaml
+
+# --- Dev / tooling ---
+pytest>=8.0
+ruff>=0.4                       # lint/format (English-code convention)
+
+# ============================================================================
+# NOT pip-installable — system binaries / external tools (see CLAUDE.md registry):
+#   * mmseqs2          -> conda install -c bioconda mmseqs2  (or static binary)
+#   * SignalP 6.0      -> licensed download from DTU Health Tech
+#   * ESMFold weights  -> via fair-esm; or use AFDB lookups to avoid local folding
+#   * AFDB / UniProt / ProteinGym / PEER / BioLiP2 / FLIP / CAMEO -> dataset downloads
+# ============================================================================

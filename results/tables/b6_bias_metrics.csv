@@ -1,0 +1,7 @@
+backbone,n,position_gap_pp,shift_sensitivity,robust_accuracy
+ESM-2 650M,120,3.29,0.0276,0.9094
+ESM C 300M,120,3.04,0.041,0.8531
+SaProt 650M,120,2.82,0.0267,0.9069
+ProtT5,120,5.49,0.0359,0.8697
+ProtBERT,120,8.68,0.078,0.7757
+ProGen2-764M,117,6.75,0.0828,0.7791

@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Masked recovery (controlled probe)",
+    "group": "positive",
+    "unit": "pp",
+    "n": 62,
+    "effect": 10.697055605029867,
+    "ci": [
+      6.4533528183106235,
+      15.311681317060344
+    ],
+    "p": 0.0,
+    "threshold": 3.0,
+    "detail": "window-relocation, ESM-2, W=256",
+    "verdict": "clears bar (p<0.01)"
+  },
+  {
+    "name": "Embedding fidelity (controlled probe)",
+    "group": "positive",
+    "unit": "pp",
+    "n": 60,
+    "effect": 3.575104276339213,
+    "ci": [
+      2.773533614973227,
+      4.474638859430949
+    ],
+    "p": 0.0,
+    "threshold": 3.0,
+    "detail": "benchmark test split, ESM-2, W=256",
+    "verdict": "clears bar (p<0.01)"
+  },
+  {
+    "name": "ProteinGym VEP (\u0394\u03c1)",
+    "group": "downstream",
+    "unit": "\u0394\u03c1",
+    "n": 27,
+    "effect": 0.01928377629899505,
+    "ci": [
+      -0.006836713462255196,
+      0.04583519622345581
+    ],
+    "p": 0.1498,
+    "threshold": 0.03,
+    "detail": "27 long assays, ESM-2 wt-marginals, W=256",
+    "verdict": "n.s. (CI crosses 0)"
+  },
+  {
+    "name": "Secondary structure (Q3)",
+    "group": "downstream",
+    "unit": "pp",
+    "n": 600,
+    "effect": -0.5833333333333334,
+    "ci": [
+      -2.5,
+      1.3333333333333335
+    ],
+    "p": 0.5848,
+    "threshold": 3.0,
+    "detail": "linear probe on ESM-2, W=256",
+    "verdict": "n.s. (CI crosses 0)"
+  },
+  {
+    "name": "Long-range contacts (prob)",
+    "group": "downstream",
+    "unit": "pp",
+    "n": 444,
+    "effect": -0.3425469269623628,
+    "ci": [
+      -1.3732608803757675,
+      0.7129364400296595
+    ],
+    "p": 0.5088,
+    "threshold": 3.0,
+    "detail": "ESM-2 contact head, sep 24-100, W=256",
+    "verdict": "n.s. (CI crosses 0)"
+  }
+]

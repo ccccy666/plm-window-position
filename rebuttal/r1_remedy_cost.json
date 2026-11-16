@@ -1,0 +1,123 @@
+{
+  "per_forward_seconds": {
+    "128": 0.012333016699994915,
+    "256": 0.017699464199995418,
+    "384": 0.015249370800006545
+  },
+  "K_crops": 5,
+  "recovered_fraction_note": "from paper Table 3 (ESM-2 W=256): uniform~0.46-0.56, weighted~0.68-0.80",
+  "cost_table": [
+    {
+      "L": 500,
+      "W": 256,
+      "strategy": "single_tiling",
+      "forward_passes": 2,
+      "x_over_single": 1.0,
+      "recovered_frac": 0.0,
+      "est_seconds": 0.04
+    },
+    {
+      "L": 500,
+      "W": 256,
+      "strategy": "uniform_multicrop",
+      "forward_passes": 10,
+      "x_over_single": 5.0,
+      "recovered_frac": 0.53,
+      "est_seconds": 0.18
+    },
+    {
+      "L": 500,
+      "W": 256,
+      "strategy": "weighted_multicrop",
+      "forward_passes": 10,
+      "x_over_single": 5.0,
+      "recovered_frac": 0.74,
+      "est_seconds": 0.18
+    },
+    {
+      "L": 500,
+      "W": 256,
+      "strategy": "centering",
+      "forward_passes": 500,
+      "x_over_single": 250.0,
+      "recovered_frac": 1.0,
+      "est_seconds": 8.85
+    },
+    {
+      "L": 1000,
+      "W": 256,
+      "strategy": "single_tiling",
+      "forward_passes": 4,
+      "x_over_single": 1.0,
+      "recovered_frac": 0.0,
+      "est_seconds": 0.07
+    },
+    {
+      "L": 1000,
+      "W": 256,
+      "strategy": "uniform_multicrop",
+      "forward_passes": 20,
+      "x_over_single": 5.0,
+      "recovered_frac": 0.53,
+      "est_seconds": 0.35
+    },
+    {
+      "L": 1000,
+      "W": 256,
+      "strategy": "weighted_multicrop",
+      "forward_passes": 20,
+      "x_over_single": 5.0,
+      "recovered_frac": 0.74,
+      "est_seconds": 0.35
+    },
+    {
+      "L": 1000,
+      "W": 256,
+      "strategy": "centering",
+      "forward_passes": 1000,
+      "x_over_single": 250.0,
+      "recovered_frac": 1.0,
+      "est_seconds": 17.7
+    },
+    {
+      "L": 2000,
+      "W": 256,
+      "strategy": "single_tiling",
+      "forward_passes": 8,
+      "x_over_single": 1.0,
+      "recovered_frac": 0.0,
+      "est_seconds": 0.14
+    },
+    {
+      "L": 2000,
+      "W": 256,
+      "strategy": "uniform_multicrop",
+      "forward_passes": 40,
+      "x_over_single": 5.0,
+      "recovered_frac": 0.53,
+      "est_seconds": 0.71
+    },
+    {
+      "L": 2000,
+      "W": 256,
+      "strategy": "weighted_multicrop",
+      "forward_passes": 40,
+      "x_over_single": 5.0,
+      "recovered_frac": 0.74,
+      "est_seconds": 0.71
+    },
+    {
+      "L": 2000,
+      "W": 256,
+      "strategy": "centering",
+      "forward_passes": 2000,
+      "x_over_single": 250.0,
+      "recovered_frac": 1.0,
+      "est_seconds": 35.4
+    }
+  ],
+  "decision_rule": [
+    "weighted multi-crop and uniform multi-crop cost the SAME (K forward passes); weighted recovers more (68-80% vs 46-56%) -> always prefer weighted.",
+    "K-crop multi-crop costs ~K x a single tiling and recovers most of the gap; per-residue centering reaches 100% but costs ~W x a single tiling (~W/K x more than K-crop) -> use centering only when the last 20-30% is worth an order-of-magnitude more compute."
+  ]
+}

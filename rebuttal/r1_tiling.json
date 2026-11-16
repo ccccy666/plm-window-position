@@ -1,0 +1,109 @@
+{
+  "n_contacts": 1178,
+  "sep_range": [
+    30,
+    198
+  ],
+  "overlap_grid": {
+    "128": {
+      "non-overlap (s=W)": {
+        "stride": 128,
+        "miss_all": 0.4100169779286927,
+        "miss_sep_lt_W": 0.3794642857142857
+      },
+      "50% overlap (s=W/2)": {
+        "stride": 64,
+        "miss_all": 0.11714770797962648,
+        "miss_sep_lt_W": 0.07142857142857142
+      },
+      "75% overlap (s=W/4)": {
+        "stride": 32,
+        "miss_all": 0.07045840407470289,
+        "miss_sep_lt_W": 0.022321428571428572
+      }
+    },
+    "256": {
+      "non-overlap (s=W)": {
+        "stride": 256,
+        "miss_all": 0.19100169779286927,
+        "miss_sep_lt_W": 0.19100169779286927
+      },
+      "50% overlap (s=W/2)": {
+        "stride": 128,
+        "miss_all": 0.008488964346349746,
+        "miss_sep_lt_W": 0.008488964346349746
+      },
+      "75% overlap (s=W/4)": {
+        "stride": 64,
+        "miss_all": 0.0,
+        "miss_sep_lt_W": 0.0
+      }
+    },
+    "384": {
+      "non-overlap (s=W)": {
+        "stride": 384,
+        "miss_all": 0.10441426146010187,
+        "miss_sep_lt_W": 0.10441426146010187
+      },
+      "50% overlap (s=W/2)": {
+        "stride": 192,
+        "miss_all": 0.0,
+        "miss_sep_lt_W": 0.0
+      },
+      "75% overlap (s=W/4)": {
+        "stride": 96,
+        "miss_all": 0.0,
+        "miss_sep_lt_W": 0.0
+      }
+    }
+  },
+  "miss_by_separation_W256_nonoverlap": [
+    {
+      "sep_bin": "30-60",
+      "n": 801,
+      "miss_pct": 14.7
+    },
+    {
+      "sep_bin": "60-90",
+      "n": 239,
+      "miss_pct": 21.8
+    },
+    {
+      "sep_bin": "90-120",
+      "n": 71,
+      "miss_pct": 32.4
+    },
+    {
+      "sep_bin": "120-150",
+      "n": 36,
+      "miss_pct": 52.8
+    },
+    {
+      "sep_bin": "150-200",
+      "n": 31,
+      "miss_pct": 41.9
+    }
+  ],
+  "miss_by_length_W256_nonoverlap": [
+    {
+      "len_bin": "(479.999, 526.0]",
+      "n": 300,
+      "miss_pct": 15.7
+    },
+    {
+      "len_bin": "(526.0, 587.0]",
+      "n": 292,
+      "miss_pct": 23.3
+    },
+    {
+      "len_bin": "(587.0, 732.0]",
+      "n": 298,
+      "miss_pct": 24.5
+    },
+    {
+      "len_bin": "(732.0, 892.0]",
+      "n": 288,
+      "miss_pct": 12.8
+    }
+  ]
+}

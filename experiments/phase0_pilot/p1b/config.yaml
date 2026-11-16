@@ -1,0 +1,8 @@
+probe: P1prime_position_sweep
+model: esm2_t33_650M_UR50D
+seed: 42
+flank: 30
+n_cassettes: 200
+lengths: [256, 512]
+rel_pos: [0.05, 0.2, 0.35, 0.5, 0.65, 0.8, 0.95]
+n_rows: 5600

@@ -1,0 +1,19 @@
+[project]
+name = "calibrate"
+version = "1.0.0"
+description = "Window position in protein language models: controlled benchmark, cross-architecture taxonomy, mechanism tests, and window choices (TMLR 2026)."
+requires-python = ">=3.11"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B"]

@@ -1,0 +1,6 @@
+probe: P2
+model: esm2_t33_650M_UR50D
+scoring: wt_marginals_full_seq
+train_crop: 1022
+seed: 42
+n_rows: 37677

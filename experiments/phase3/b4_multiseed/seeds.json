@@ -1,0 +1,62 @@
+{
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "n_targets": 120,
+  "W": 256,
+  "rel": [
+    0.1,
+    0.3,
+    0.5,
+    0.7,
+    0.9
+  ],
+  "per_seed": [
+    {
+      "seed": 42,
+      "position_gap_pp": 3.285600244998932,
+      "shift_sensitivity": 0.027558084841672385,
+      "robust_accuracy": 0.9093671634793281
+    },
+    {
+      "seed": 43,
+      "position_gap_pp": 3.22552502155304,
+      "shift_sensitivity": 0.027061715780477336,
+      "robust_accuracy": 0.9112628797690073
+    },
+    {
+      "seed": 44,
+      "position_gap_pp": 4.025467212001483,
+      "shift_sensitivity": 0.028899889350552616,
+      "robust_accuracy": 0.9082521140575409
+    },
+    {
+      "seed": 45,
+      "position_gap_pp": 3.983370848000049,
+      "shift_sensitivity": 0.028782882546644625,
+      "robust_accuracy": 0.9062474670509497
+    },
+    {
+      "seed": 46,
+      "position_gap_pp": 3.0511368811130524,
+      "shift_sensitivity": 0.025435290879236475,
+      "robust_accuracy": 0.9169561659296354
+    }
+  ],
+  "position_gap_pp": {
+    "mean": 3.5142200415333114,
+    "std": 0.45594242726295714
+  },
+  "shift_sensitivity": {
+    "mean": 0.027547572679716685,
+    "std": 0.0014188598135719468
+  },
+  "robust_accuracy": {
+    "mean": 0.9104171580572922,
+    "std": 0.004081975514111352
+  }
+}

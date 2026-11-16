@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.ipynb_checkpoints/
+# model weights and download caches
+data/cache/
+# MMseqs2 scratch space
+data/processed/benchmark/mmseqs/tmp/
+results/logs/

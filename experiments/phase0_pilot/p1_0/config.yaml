@@ -1,0 +1,5 @@
+probe: P1.0
+model: esm2_t33_650M_UR50D
+seed: 42
+last_k_layers: 16
+n_probes: 288

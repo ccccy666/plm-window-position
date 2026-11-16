@@ -1,0 +1,22 @@
+{
+  "trained": {
+    "n": 71,
+    "drop_center": 0.16794224408730654,
+    "drop_edge": 0.2701712375585462,
+    "drop_edge_minus_center_pp": 10.222899347123965,
+    "drop_p": 0.0,
+    "fidelity_gap_pp": 3.2682878030857574,
+    "fidelity_p": 0.0,
+    "corr_asym_vs_gap": 0.5372448472267672
+  },
+  "random_init": {
+    "n": 71,
+    "drop_center": 0.5315367608842715,
+    "drop_edge": 0.5313043713989393,
+    "drop_edge_minus_center_pp": -0.023238948533232783,
+    "drop_p": 0.0142,
+    "fidelity_gap_pp": 0.2261034199889277,
+    "fidelity_p": 0.0574,
+    "corr_asym_vs_gap": -0.1595527760464724
+  }
+}

@@ -1,0 +1,23 @@
+name: crop-position-benchmark
+version: '0.1'
+date: '2026-06-08'
+n_probes: 200
+n_families: 200
+n_train: 140
+n_test: 60
+window_W: 256
+rel_pos_grid:
+- 0.1
+- 0.3
+- 0.5
+- 0.7
+- 0.9
+seed: 42
+mmseqs: easy-cluster --min-seq-id 0.3 -c 0.8
+probe: 'window-relocation: place target at rel_pos in W-window; metric vs placement'
+bias_metrics:
+- position_gap
+- shift_sensitivity
+- robust_accuracy
+source: UniProt reviewed human (pre-2024 snapshot)
+git_sha: 92ee3d9
