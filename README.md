@@ -10,20 +10,22 @@ Protein language models (pLMs) read long proteins through fixed-length windows, 
 the edge or at the center of its window. The paper measures what that changes, why, and when it matters:
 
 - **What changes.** All seven bidirectional encoders tested (ESM-2, ESM-1b, ESM C, SaProt, ProtT5, Ankh,
-  ProtBERT) represent a residue most faithfully when it is centered: a center-favored inverted-U whose size
-  varies five-fold across encoders, independently of the type of position encoding. The causal ProGen2
-  depends monotonically on left context.
+  ProtBERT) represent a residue closest to its full-context representation when it sits near the center of the
+  window: a center-favored inverted-U whose size varies five-fold across encoders without following the type of
+  position encoding. The causal ProGen2 depends monotonically on left context.
 - **Why.** The effect is one-sided loss of informative context, not an intrinsic position bias or a
   training-crop cliff. It is learned: in each of five encoders tested, a randomly-initialized network of the
-  same architecture shows essentially none. Trained encoders attend locally, so an edge window removes more
-  of the attention a residue uses, and the loss is largest when the cut removes the residue's own domain.
-- **When it matters.** Variant-effect rankings, secondary structure, and long-range contacts whose context
-  stays in the window show no significant change. The model's confident contact predictions lose 20 points of probability
-  once a partner's context is cut and vanish once the partner leaves the window, which a non-overlapping
-  tiling of 256-residue windows does for 19% of them and a 50%-overlapping tiling for 0.8%.
-- **What to do.** A window centered on the residue's domain recovers 98% of the edge loss; scoring each
-  residue from the overlapping window in which it is most central recovers most of it at the cost of a
-  multi-crop.
+  same architecture shows essentially none. Trained encoders attend locally, so an edge window removes more of
+  the context a residue attends to, and the cost is largest when the cut removes the residue's own domain.
+- **When it matters.** Window position matters where the window cuts context that an output depends on.
+  Variant-effect rankings show no significant change, because the edge shifts an assay's scores together, and
+  neither do secondary structure and long-range contacts while their context stays in the window. Once the
+  context beyond a contact partner is cut, the model's confident contact predictions lose 20 points of
+  probability, and they vanish once the partner leaves the window: a non-overlapping tiling of 256-residue
+  windows separates the partners of 19% of these contacts, a 50%-overlapping tiling 0.8%.
+- **What to do.** For per-residue representations, a window centered on the residue's domain recovers 98% of
+  the edge loss; for masked-recovery scoring, taking each residue from its most central overlapping window
+  recovers most of it at the cost of averaging over those windows.
 
 ## Contents
 
@@ -74,6 +76,7 @@ runs it (Position Gap +3.58 pp, 95% CI [2.77, 4.47], on the test split).
 
 | Paper | Script | Env |
 |---|---|---|
+| Fig. 1 (schematic of the two probes) | `scripts/phase3/fig1_schematic.py` | calibrate |
 | Table 2, Fig. 2 (taxonomy) | `scripts/phase1/t1a_fidelity*.py`, `scripts/phase3/b1_pe_axis.py esm1b\|ankh`; redraw: `scripts/phase3/fig_taxonomy.py`, `scripts/phase3/b6_bias_metrics.py` | per model |
 | Sec. 5.1 (fixed-context cassette) | `scripts/phase0/p1b_run.py`, `scripts/phase1/t1b_mechanism.py` | calibrate |
 | Sec. 5.2 (training-crop cliff) | `scripts/phase3/b2_truncation_cliff_controlled.py`, `scripts/phase0/p2_run.py` | calibrate |
